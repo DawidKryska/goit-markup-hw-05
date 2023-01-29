@@ -1,2 +1,2 @@
-https://dawidkryska.github.io/goit-markup-hw-04/
-https://github.com/DawidKryska/goit-markup-hw-04.git
+https://dawidkryska.github.io/goit-markup-hw-05/
+https://github.com/DawidKryska/goit-markup-hw-05.git

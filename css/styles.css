@@ -103,6 +103,73 @@ figure {
     text-align: center;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     margin: 30px auto auto auto;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.button-header:hover,
+.button-header:active {
+    background-color: #026dc4;
+    visibility: visible;
+    opacity: 1;
+    transition: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.is-hidden {
+    pointer-events: none;
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(0.5);
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 999;
+}
+
+.modal-window {
+    position: absolute;
+    width: 528px;
+    height: 581px;
+    left: 536px;
+    top: 221px;
+    background-color: #ffffff;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    transition-property: opacity, transform;
+    transition-delay: 2s, 2s;
+    transition-duration: 2s, 2s;
+    transform: scale(1);
+    opacity: 1;
+}
+
+.modal-close-button {
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    padding: 0px;
+    background-color: #ffffff;
+    border: #ffffff;
+    cursor: pointer;
+}
+
+.modal-close-button-icon {
+    position: relative;
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: 30px;
 }
 
 .content-block {
@@ -256,12 +323,16 @@ figure {
 }
 
 .nav-items {
+    display: flex;
+    justify-content: space-between;
+}
+
+.active-link a {
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
-    display: flex;
-    justify-content: space-between;
+    color: #212121;
 }
 
 .menu-nav {
@@ -274,6 +345,9 @@ figure {
 .menu-nav a:focus,
 .menu-nav a:active {
     color: var(--second-font-color);
+    transition: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .buttons {
@@ -301,9 +375,12 @@ figure {
 .buttons .list-button:focus,
 .buttons .list-button:active {
     color: var(--primary-background-color);
-    background: var(--second-font-color);
+    background-color: var(--second-font-color);
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
         0px 2px 2px rgba(0, 0, 0, 0.12);
+    transition: background-color, color, box-shadow;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .pointer button {
@@ -333,6 +410,9 @@ figure {
 .contact-links .contact-header:hover,
 .contact-links .contact-header:focus {
     color: var(--second-font-color);
+    transition: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-smartphone {
@@ -344,6 +424,9 @@ figure {
 .contact-header:hover .icon-smartphone,
 .contact-header:focus .icon-smartphone {
     fill: var(--second-font-color);
+    transition: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-envelope {
@@ -355,6 +438,9 @@ figure {
 .contact-header:hover .icon-envelope,
 .contact-header:focus .icon-envelope {
     fill: var(--second-font-color);
+    transition: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .list-item {
@@ -390,6 +476,9 @@ figure {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
         1px 4px 6px rgba(0, 0, 0, 0.16);
     cursor: pointer;
+    transition: box-shadow;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .card-bg {
@@ -440,6 +529,9 @@ figure {
 .icon:focus {
     fill: #ffffff;
     background-color: #2196f3;
+    transition: background-color, fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .list-item-block {
@@ -503,11 +595,13 @@ figure {
     fill: #2196f3;
     background-color: #ffffff;
     border: 1px solid #2196f3;
+    transition: background-color, fill, border;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer {
     display: flex;
-
     width: 1600px;
     height: 252px;
     background: var(--secondary-background-color);
@@ -536,6 +630,9 @@ figure {
 .contact-links-footer a:hover,
 .contact-links-footer a:focus {
     color: var(--second-font-color);
+    transition: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer .logo-header-second-part {
@@ -573,6 +670,9 @@ figure {
 .icon3:focus {
     fill: #ffffff;
     background-color: #2196f3;
+    transition: background-color, fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-icons-footer-title {
