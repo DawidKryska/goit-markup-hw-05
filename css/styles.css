@@ -526,6 +526,7 @@ figure {
     display: flex;
     flex-direction: column;
     width: 370px;
+    height: 404px;
     border: 1px solid #eeeeee;
     position: relative;
     overflow: hidden;
